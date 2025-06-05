@@ -3,144 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile Biodata - Elhazza Kalevi</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        .container { width: 90%; margin: 0 auto; }
-        .section { margin: 40px 0; }
-        .flex-row { display: flex; align-items: center; }
-        .left { flex: 1; }
-        .right { flex: 1; text-align: right; }
-        .biodata-boxes { display: flex; flex-wrap: wrap; gap: 16px; }
-        .biodata-box { flex: 1 1 30%; border: 1px solid #ccc; padding: 16px; border-radius: 8px; min-width: 150px; background: #f9f9f9; }
-        table { width: 100%; border-collapse: collapse; margin-top: 16px; }
-        th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
-        th { background: #eee; }
-        img.profile { max-width: 200px; border-radius: 50%; }
-        /* Navigation styles */
-        nav {
-            background: #222;
-            padding: 0;
-            margin-bottom: 24px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 24px;
-            transition: background 0.2s;
-        }
-        nav ul li a:hover {
-            background: #444;
-        }
-        @media (max-width: 700px) {
-            .flex-row { flex-direction: column; text-align: center; }
-            .right { text-align: center; margin-top: 20px; }
-            .biodata-boxes { flex-direction: column; }
-            nav ul { flex-direction: column; }
-            nav ul li a { text-align: center; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#biodata">Biodata</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <!-- Section 1: Judul di kiri, gambar di kanan -->
-        <div class="section flex-row" id="home">
-            <div class="left">
-                <h1>Elhazza Kalevi</h1>
-                <h2>Profile Biodata</h2>
-            </div>
-            <div class="right">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto Elhazza Kalevi" class="profile">
-            </div>
-        </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="brand">Elhazza Kalevi</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Header</a></li>
+                <li><a href="#about">Biodata</a></li>
+                <li><a href="#portofolio">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Section 2: Judul di kiri, gambar di kanan -->
-        <div class="section flex-row">
-            <div class="left">
-                <h2>Section 2</h2>
-                <p>Ini adalah deskripsi singkat untuk section 2.</p>
+    <!-- Hero/Header Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h2>Selamat Datang di Website Saya</h2>
+                <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+                <a href="#about" class="btn-primary">Pelajari Lebih Lanjut</a>
             </div>
-            <div class="right">
-                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Section 2 Image" class="profile">
+            <div class="hero-right">
+                <img id="profileImage" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto Elhazza Kalevi" class="profile-img">
             </div>
         </div>
+    </section>
 
-        <!-- Section 3: Biodata dengan 6 box -->
-        <div class="section" id="biodata">
-            <h2>Biodata</h2>
-            <div class="biodata-boxes">
-                <div class="biodata-box">
-                    <strong>Nama:</strong><br>Elhazza Kalevi
-                </div>
-                <div class="biodata-box">
-                    <strong>Tempat, Tanggal Lahir:</strong><br>Bandung, 1 Januari 2000
-                </div>
-                <div class="biodata-box">
-                    <strong>Alamat:</strong><br>Jl. Merdeka No. 10, Bandung
-                </div>
-                <div class="biodata-box">
-                    <strong>Email:</strong><br>elhazza@email.com
-                </div>
-                <div class="biodata-box">
-                    <strong>Telepon:</strong><br>0812-3456-7890
-                </div>
-                <div class="biodata-box">
-                    <strong>Hobi:</strong><br>Futsal, Membaca, Coding
-                </div>
+    <!-- About Me / Biodata Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p class="about-desc">A brief introduction about myself</p>
+        <div class="biodata-grid">
+            <div class="biodata-item"><span>Full Name:</span> Elhazza Kalevi</div>
+            <div class="biodata-item"><span>Education:</span> SMA KELAS 12</div>
+            <div class="biodata-item"><span>Pekerjaan:</span> Programmer</div>
+            <div class="biodata-item"><span>Contact:</span> elhazzakalevy007@email.com</div>
+            <div class="biodata-item"><span>Hobi:</span> Futsal, Membaca, Coding</div>
+            <div class="biodata-item"><span>Alamat:</span> Menteng - Bintaro</div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portofolio">
+        <h2>Portofolio</h2>
+        <div class="portfolio-list">
+            <div class="portfolio-card">
+                <img src="https://i.imgur.com/3QfKQF8.png" alt="Proyek 1">
+                <div class="portfolio-title">Proyek 1</div>
+                <div class="portfolio-desc">Membuat website portofolio pribadi menggunakan HTML, CSS, dan JavaScript.</div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://i.imgur.com/8Km9tLL.png" alt="Proyek 2">
+                <div class="portfolio-title">Proyek 2</div>
+                <div class="portfolio-desc">Mengembangkan aplikasi pengelolaan tugas untuk mahasiswa.</div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://i.imgur.com/5tj6S7Ol.png" alt="Proyek 3">
+                <div class="portfolio-title">Proyek 3</div>
+                <div class="portfolio-desc">Membuat desain logo untuk komunitas IT kampus.</div>
             </div>
         </div>
+    </section>
 
-        <!-- Section 4: Portofolio menggunakan tabel -->
-        <div class="section" id="portofolio">
-            <h2>Portofolio</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Proyek</th>
-                        <th>Deskripsi</th>
-                        <th>Tahun</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Website Pribadi</td>
-                        <td>Membuat website portofolio pribadi menggunakan HTML, CSS, dan JavaScript.</td>
-                        <td>2023</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Aplikasi Tugas Kuliah</td>
-                        <td>Mengembangkan aplikasi pengelolaan tugas untuk mahasiswa.</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Desain Logo</td>
-                        <td>Membuat desain logo untuk komunitas IT kampus.</td>
-                        <td>2022</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            © 2024 Elhazza Kalevi. All rights reserved
         </div>
-    </div>
+    </footer>
+
+    <script>
+        // Ganti gambar profil saat user memilih file baru
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
